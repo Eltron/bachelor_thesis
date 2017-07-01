@@ -1,0 +1,83 @@
+\begin{thebibliography}{10}
+\def\selectlanguageifdefined#1{
+\expandafter\ifx\csname date#1\endcsname\relax
+\else\selectlanguage{#1}\fi}
+\providecommand*{\href}[2]{{\small #2}}
+\providecommand*{\url}[1]{{\small #1}}
+\providecommand*{\BibUrl}[1]{\url{#1}}
+\providecommand{\BibAnnote}[1]{}
+\providecommand*{\BibEmph}[1]{#1}
+\ProvideTextCommandDefault{\cyrdash}{\hbox to.8em{--\hss--}}
+\providecommand*{\BibDash}{\ifdim\lastskip>0pt\unskip\nobreak\hskip.2em\fi
+\cyrdash\hskip.2em\ignorespaces}
+
+\bibitem{crm}
+\selectlanguageifdefined{russian}
+What is CRM{ [Электронный ресурс]}, TechTarget. \BibDash
+\newblock URL: \BibUrl{http://searchcrm.techtarget.com/definition/CRM}
+  ({дата обращения}: 27.06.2017).
+
+\bibitem{salesplatform}
+\selectlanguageifdefined{russian}
+Salesplatform Wiki{ [Электронный ресурс]}, SalesPlatform.
+  \BibDash
+\newblock URL: \BibUrl{https://goo.gl/EFSpny} ({дата обращения}:
+  27.06.2017).
+
+\bibitem{vtiger}
+\selectlanguageifdefined{russian}
+Vtiger Documentation{ [Электронный ресурс]}, Vtiger. \BibDash
+\newblock URL: \BibUrl{http://community.vtiger.com/help/} ({дата
+  обращения}: 27.06.2017).
+
+\bibitem{bi}
+\selectlanguageifdefined{russian}
+BI-системы{ [Электронный ресурс]}, Норбит.
+  \BibDash
+\newblock URL: \BibUrl{http://www.norbit.ru/products/groups/189.html}
+  ({дата обращения}: 28.06.2017).
+
+\bibitem{report}
+\selectlanguageifdefined{russian}
+Pentaho Reporting.{ [Электронный ресурс]}, Rittan Holdings
+  Ltd. \BibDash
+\newblock URL: \BibUrl{http://community.pentaho.com/projects/reporting/}
+  ({дата обращения}: 28.06.2017).
+
+\bibitem{pivot4j}
+\selectlanguageifdefined{russian}
+Pivot4j{ [Электронный ресурс]}, Pivot4j Team. \BibDash
+\newblock URL: \BibUrl{http://www.pivot4j.org/} ({дата обращения}:
+  28.06.2017).
+
+\bibitem{saikuVsPivot}
+\selectlanguageifdefined{russian}
+Saiku analytics vs Pivot4j{ [Электронный ресурс]}, Stack
+  Overflow. \BibDash
+\newblock URL:
+  \BibUrl{https://stackoverflow.com/questions/27000958/saiku-analytics-vs-pivot4j}
+  ({дата обращения}: 28.06.2017).
+
+\bibitem{pentahoDocs}
+\selectlanguageifdefined{russian}
+API Documentation for BA Platform{ [Электронный ресурс]},
+  Pentaho Corporation. \BibDash
+\newblock URL:
+  \BibUrl{https://help.pentaho.com/%20Documentation/7.0/0R0/070/010} ({дата
+  обращения}: 28.06.2017).
+
+\bibitem{rest}
+\selectlanguageifdefined{russian}
+Архитектура REST{ [Электронный ресурс]},
+  ХабраХабр. \BibDash
+\newblock URL: \BibUrl{https://habrahabr.ru/post/38730/} ({дата
+  обращения}: 29.06.2017).
+
+\bibitem{jsr}
+\selectlanguageifdefined{russian}
+JSR Overview{ [Электронный ресурс]}, Java Community Process.
+  \BibDash
+\newblock URL: \BibUrl{https://jcp.org/en/jsr/overview} ({дата
+  обращения}: 30.06.2017).
+
+\end{thebibliography}

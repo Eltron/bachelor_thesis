@@ -1,0 +1,26 @@
+<html>
+<head>
+    <meta charset='utf-8'>
+    <script type='text/javascript' src='main.js'></script>
+    <script type='text/javascript' src='jquery-3.2.1.min.js'></script>
+    <link rel='stylesheet' type='text/css' href='main.css'/>
+</head>
+<body>
+    <div class='center'>  
+        <select id='files'>   
+            <option value='-1'>Select query file</option>
+        </select>
+        <button class='center' id='gen' onclick='generateURL()' style='display: none'>Generate URL</button>
+        <input type='text' id='url' class='center' size='15' value='Here will be URL' style='display: none' />
+        <button class='center' id='back' onclick='back()' style='display: none'>back</button>
+    </div>
+    <div class='center'>
+        <button class='center' id='exec' onclick='getTable()'>Run query</button>
+        <table id='data'></table>
+    </div>
+   <script type='text/javascript'>
+        getFiles();
+        setCellClick();
+    </script>
+</body>
+</html>

@@ -1,0 +1,68 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%
+%% Преамбула
+%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[%
+  bachelor,
+  a5paper,
+  subf,
+  href,
+  dotsinheaders,
+  openany
+]{csse-fcs}
+
+%\usepackage[T2A]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[english,russian]{babel}
+
+%галочка
+\usepackage{amssymb}% http://ctan.org/pkg/amssymb
+\usepackage{pifont}% http://ctan.org/pkg/pifont
+\newcommand{\cmark}{\ding{52}}%
+\newcommand{\xmark}{\ding{56}}
+
+\usepackage[symbol*,norule,splitrule]{footmisc}
+\interfootnotelinepenalty=10000
+
+
+\usepackage{cmap} % чтобы работал поиск по PDF
+%\usepackage[pdftex]{graphicx}
+
+% Компактные списки
+\usepackage{mdwlist}
+
+% Таблицы
+\usepackage{array}
+\usepackage{tabu}
+\usepackage{longtable} %tabu needs this to be loaded.
+\usepackage{lipsum}
+
+
+
+% Листинги
+
+\usepackage{listings}
+% TODOs
+\usepackage[%
+  colorinlistoftodos,
+  shadow
+]{todonotes}
+
+% Путь к каталогу со всеми рисунками
+\graphicspath{{fig/}}
+
+% Автоконвертер для EPS
+% \usepackage{epstopdf}
+
+% Генератор текста
+\usepackage{blindtext}
+
+\usepackage{nomencl}
+
+\usepackage{tabu}
+
+\usepackage{float}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

@@ -1,0 +1,344 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\chapter{}
+\vspace{7em}
+\begin{center}
+	Кроссплатформенное мобильное приложение - клиент системы управления бизнес процессами Camunda.
+\end{center}
+
+\begin{center}
+	Техническое задание.
+\end{center}
+\begin{center}
+	1 лист
+\end{center}
+
+\newpage
+\textbf{Введение}\\
+Наименование программы: «Кроссплатформенное мобильное приложение - клиент системы управления бизнес процессами Camunda». Данное средство предназначено для управления бизнес процессами системы Camunda, через мобильное устройство. 
+
+\textbf{Назначение разработки}\\
+Обеспечение скорости и удобства сотрудников в системе Camunda BPM без привязки к рабочему месту в офисе.
+
+\textbf{Требование к программе или программному изделию}
+
+\textit{Требования к функциональным характеристикам}\\
+Разработанное приложение должно поддерживать все возможности модуля Tasklist web-версии системы, в частности:
+\begin{itemize}
+	\item Создание произвольных задач или старт предварительно определенных бизнес-процессов;
+	\item Получение списка текущих бизнес-процессов или задач, а также их состояния и возможностью просмотра более детальной информации;
+	\item Разграничение задач по пользователям;
+	\item Изменение статуса и комментирования бизнес-процессов или задач.
+\end{itemize}
+Производить аутентификацию в системе, с помощью логина и пароля какого-либо пользователя системы. Возможность задания адреса и порта сервера с развернутой системой Camunda BPM.
+
+\textit{Требования к составу и параметрам технических средств}\\
+Разработанное кроссплатформенное мобильное приложение может функционировать на аппаратной платформе следующих мобильных операционных системах:
+\begin{itemize}
+	\item Android (версия 4.0.3 и старше)
+	\item IOS (версия 6.1 и старше)
+\end{itemize}
+
+\textit{Требования к информационной и программной совместимости}\\
+Программа должна быть написана на языке C\# с использованием фреймворка Xamarin, и взаимодействовать с сервером Camunda через REST-интерфейс.
+
+
+\chapter{}
+%\addcontentsline{toc}{chapter}{ПРИЛОЖЕНИЕ Б. Описание программы}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\vspace{7em}
+
+\begin{center}
+	Кроссплатформенное мобильное приложение - клиент системы управления бизнес процессами Camunda.
+\end{center}
+
+\begin{center}
+	Описание программы.
+\end{center}
+\begin{center}
+	1 лист
+\end{center}
+
+\newpage
+\textbf{Общие сведения}\\
+Разработанное кроссплатформенное мобильное приложение, реализует всю функциональность модуля Tasklist web-версии системы Camunda. Это позволяет автоматизировать работу с бизнес процессами через мобильное устройство.
+
+\textbf{Используемые технические средства}\\
+Для функционирования приложения, необходимо подключение к сети в которой находится сервер с Camunda, а также одна из следующих мобильных операционных систем:
+\begin{itemize}
+	\item Android (версия 4.0.3 и старше);
+	\item IOS (версия 6.1 и старше).
+\end{itemize} 
+
+\textbf{Входные данные}\\
+Входными данными являются сетевая конфигурация:
+\begin{enumerate}
+	\item адрес сервера;
+	\item порт сервера.
+\end{enumerate}
+А также данные пользователя, необходимые для аутентификации:
+\begin{enumerate}
+	\item логин пользователя;
+	\item пароль пользователя.
+\end{enumerate}
+
+\newpage
+
+\chapter{}
+
+\vspace{7em}
+
+\begin{center}
+	Кроссплатформенное мобильное приложение - клиент системы управления бизнес процессами Camunda.
+\end{center}
+
+\begin{center}
+	Программа и методика испытаний.
+\end{center}
+\begin{center}
+	3 листа
+\end{center}
+\newpage
+\textbf{Объект испытаний}\\
+Наименование программы – объекта испытаний:  «Кроссплатформенное мобильное приложение - клиент системы управления бизнес процессами Camunda».
+
+\textbf{Цель испытаний}\\
+Целью проведения испытаний является проверка соответствия функциональных характеристик средства требованиям, указанным в техническом задании.
+
+\textbf{Требования к программе}\\
+Разработанное средство должно функционировать на мобильных операционных систем:
+\begin{itemize}
+	\item Android (версия 4.0.3 и старше);
+	\item IOS (версия 6.1 и старше).
+\end{itemize} 
+А также подключаться к заданному серверу с Camunda, и удалённо производить все действия модуля Tasklist с бизнес процессами.
+
+\textbf{Средства и порядок испытаний}\\
+Программа должна выполняться на эмуляторах мобильных операционных систем Android(версия 4.0.3 и старше) и IOS(версия 6.1 и старше) или на физических устройствах с соответствующей версией ОС. Эмулятор или устройство, на котором проходит тестирование, должно находится в одной сети с компьютером на котором развернута бизнес система Camunda. Для проведения испытаний был собран тестовый стенд, состоящий из трех компьютеров, находящихся в одной сети.
+
+Компьютер с эмулятором Android:
+\begin{enumerate}
+	\item Оборудование:
+	\begin{itemize}
+		\item Intel Core i5 4210U;
+		\item Оперативная память – 8 Гб;
+		\item Жёсткий диск – 250 Гб;
+		\item Карта сетевого интерфейса(NIC);
+		\item Стандартный монитор;
+		\item Клавиатура;
+		\item Мышь.
+	\end{itemize}
+	\item Операционная система:
+	\begin{itemize}
+		\item Windows 10.
+	\end{itemize}
+	\item Установленное ПО:
+	\begin{itemize}
+		\item Android SDK(API 15 - API 25);
+		\item Фреймворк Xamarin;
+		\item Microsoft Visual Studio 2015.
+	\end{itemize}
+\end{enumerate}
+Компьютер с эмулятором IOS:
+\begin{enumerate}
+	\item Оборудование:
+\begin{itemize}
+	\item Intel Core i5 5250U;
+	\item Оперативная память – 4 Гб;
+	\item Жёсткий диск – 128 Гб;
+	\item Карта сетевого интерфейса(NIC);
+	\item Стандартный монитор;
+	\item Клавиатура;
+	\item Мышь.
+\end{itemize}
+\item Операционная система:
+\begin{itemize}
+	\item Mac OS X v10.10 Yosemite.
+\end{itemize}
+\item Установленное ПО:
+\begin{itemize}
+	\item IOS SDK;
+	\item Фреймворк Xamarin;
+	\item Xamarin Studio.
+\end{itemize}
+\end{enumerate}
+Компьютер с развернутой Camunda BPM:
+\begin{enumerate}
+	\item Оборудование:
+	\begin{itemize}
+		\item AMD FX 8120;
+		\item Оперативная память – 6 Гб;
+		\item Жёсткий диск – 500 Гб;
+		\item Карта сетевого интерфейса(NIC);
+		\item Стандартный монитор;
+		\item Клавиатура;
+		\item Мышь.
+	\end{itemize}
+\item Операционная система:
+\begin{itemize}
+	\item Linux Mint 18.1 Serena.
+\end{itemize}
+\item Установленное ПО:
+\begin{itemize}
+	\item Camunda BPM.
+\end{itemize}
+\end{enumerate}
+\textbf{Порядок проведения испытаний:}
+\begin{enumerate}
+	\item запуск сервера с Camunda BPM;
+	\item проверка на нахождение в одной сети всех трех компьютеров;
+	\item выбор конфигурации эмуляторов Android и IOS;
+	\item запуск эмуляторов Android и IOS;
+	\item запуск программного средства;
+	\item проверка на соответствие функциональных характеристик, указанных в техническом задании;
+	\item анализ проведённых испытаний.
+\end{enumerate}
+
+
+
+\newpage
+
+\chapter{}
+
+\vspace{7em}
+
+\begin{center}
+	Кроссплатформенное мобильное приложение - клиент системы управления бизнес процессами Camunda.
+\end{center}
+
+\begin{center}
+	Фрагменты кода программы.
+\end{center}
+\begin{center}
+	22 листа
+\end{center}
+\newpage
+
+
+%Листинги
+%\lstinputlisting[
+%label={listings:camundaProc.cs},
+%caption={camundaProc.cs},
+%style=Java]
+%{src/camundaProc.cs}
+
+%\lstinputlisting[
+%label={listings:camundaTasks.cs},
+%caption={camundaTasks.cs},
+%style=Java]
+%{src/camundaTasks.cs}
+
+%\lstinputlisting[
+%label={listings:camundaUser.cs},
+%caption={camundaUser.cs},
+%style=Java]
+%{src/camundaUser.cs}
+
+
+
+\lstinputlisting[
+label={listings:createTask.xaml.cs},
+caption={createTask.xaml.cs},
+style=Java]
+{src/createTask.xaml.cs}
+
+%\lstinputlisting[
+%label={listings:CustomWebView.cs},
+%caption={CustomWebView.cs},
+%style=Java]
+%{src/CustomWebView.cs}
+
+\lstinputlisting[
+label={listings:engine},
+caption={engine.cs},
+style=Java]
+{src/engine.cs}
+
+\lstinputlisting[
+label={listings:fileDownloader.cs},
+caption={fileDownloader.cs},
+style=Java]
+{src/fileDownloader.cs}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\lstinputlisting[
+label={listings:MainPage.xaml.cs},
+caption={MainPage.xaml.cs},
+style=Java]
+{src/MainPage.xaml.cs}
+
+%\lstinputlisting[
+%label={listings:pdfView.xaml.cs},
+%caption={pdfView.xaml.cs},
+%style=Java]
+%{src/pdfView.xaml.cs}
+
+%\lstinputlisting[
+%label={listings:createProc.xaml.cs},
+%caption={createProc.xaml.cs},
+%style=Java]
+%{src/createProc.xaml.cs}
+
+%\lstinputlisting[
+%label={listings:procChoose.xaml.cs},
+%caption={procChoose.xaml.cs},
+%style=Java]
+%{src/procChoose.xaml.cs}
+
+%\lstinputlisting[
+%label={listings:taskPage.xaml.cs},
+%caption={taskPage.xaml.cs},
+%style=Java]
+%{src/taskPage.xaml.cs}
+
+\lstinputlisting[
+label={listings:ValueDataConverter},
+caption={ValueDataConverter.cs},
+style=Java]
+{src/ValueDataConverter.cs}
+
+%\lstinputlisting[
+%label={listings:variable},
+%caption={variable.cs},
+%style=Java]
+%{src/variable.cs}
+
+%\lstinputlisting[
+%label={listings:workspace.xaml.cs},
+%caption={workspace.xaml.cs},
+%style=Java]
+%{src/workspace.xaml.cs}
+
+%\lstinputlisting[
+%label={listings:AndroidCustomWebViewRenderer.cs},
+%caption={[Android]CustomWebViewRenderer.cs},
+%style=Java]
+%{src/android/CustomWebViewRenderer.cs}
+
+%\*lstinputlisting[
+%label={listings:AndroidworkingWithFiles.cs},
+%caption={[Android]workingWithFiles.cs},
+%style=Java]
+%{src/android/workingWithFiles.cs}
+
+%\lstinputlisting[
+%label={listings:IOSCustomWebViewRenderer.cs},
+%caption={[IOS]CustomWebViewRenderer.cs},
+%style=Java]
+%{src/ios/CustomWebViewRenderer.cs}
+
+%\lstinputlisting[
+%label={listings:IOSworkingWithFiles.cs},
+%caption={[IOS]workingWithFiles.cs},
+%style=Java]
+%{src/ios/workingWithFiles.cs}
+
+\lstinputlisting[
+label={listings:UItests},
+caption={UItests.cs},
+style=Java]
+{src/UItests.cs}
+
+%\lstinputlisting[
+%label={listings:unitTests},
+%caption={UnitTests.cs},
+%style=Java]
+%{src/UnitTests.cs}

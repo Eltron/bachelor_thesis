@@ -1,0 +1,94 @@
+\chapter{Тестирование системы}
+Тестирование было разделено на \textbf{backend}(внутренняя реализация) и \textbf{frontend}(внешнее представление) части.
+
+\section{Backend тестирование}
+
+В тестировании класса выборки данных из массива реализован следующий алгоритм:
+
+\begin{enumerate}
+	\item Сгенерирована JSON строка;
+	\item Сгенерирован JSON массив в соответствии со строкой;
+	\item Произведено сравнение полученного результата с этелонной моделью, указанной вручную.
+\end{enumerate} 
+
+Для тестирования класса выборки данных использовался фреймворк JUnit.
+
+Был создан класс TestDataSelector, часть которого представлена в листинге \ref{listings:selTest}:
+
+\begin{lstlisting}[
+label={listings:selTest},
+caption={"Класс тестирования"},
+style=java]
+import org.junit.Test;
+import static org.junit.Assert.assertEquals;
+
+public class TestDataSelector {
+
+	@Test
+	public void selectDataTest() {
+		String json = "{[[{\"value\":\"null\",\"type\":\"COLUMN_HEADER\"}, {\"value\":\"USA\",\"type\":\"COLUMN_HEADER\"},
+		...
+		{\"value\":\"6532\",\"type\":\"DATA_CELL\"}, {\"value\":\"4387\",\"type\":\"DATA_CELL\"}]]}";
+		
+		JSONObject jsonObj = new JSONObj();
+		JSONArray array = new JSONArray();
+		DataSelector dataSelector = new DataSelector(json);
+		
+		jsonObj.put(value, "Store 6");
+		jsonObj.put(type, "COLUMN_HEADER");
+		array.add(jsonObj);
+		...
+		assertEquals(dataSelector.selectData("Store 6|Drinks"), array);
+	}
+	...
+}
+\end{lstlisting}
+
+\section{Тестирование REST-сервиса}
+Jersey, используемый в проекте для тестирования предоставляет минимальный веб-сервер для развёртывания пользователем. Для тестирования разработанного сервиса необходимо проверить работу точек входа для получения массива данных и для отправки отчёта в формате JSON. 
+
+Для закрытия сервера после исполнения всех запланированных тестов использовалась аннотация @AfterClass.
+
+\begin{lstlisting}[
+label={listings:afterClass},
+caption={"Использование Аннотации AfterClass"},
+style=java]
+@AfterClass
+public static void afterClass() throws Exception {
+	server.close();
+}
+\end{lstlisting}
+
+Для верификации результата теста нужно сравнить код ответа от сервера с ожидаемым(200 - OK), указанным в спецификации.
+
+\begin{lstlisting}[
+label={listings:status},
+caption={"Сравнение ответного кода с ожидаемым положительным"},
+style=java]
+assertEquals(Response.Status.OK.getStatusCode(), response.getStatus());
+\end{lstlisting}
+
+Были протестированы варианты кодов ответа: позитивного(200), негативного(505) и случай недоступности сервиса(404).
+
+\section{Frontend тестирование}
+
+Тестирование интерфейса плагина, в данном случае, представляет из себя тестирование Javascript кода, отвечающего за выбор опции выпадающего списка и обработчиков нажатия на кнопку. Для тестирования использовалась библиотека Jasmine, предоставляющая возможность создавать “заглушки” для элементов:
+
+\begin{lstlisting}[
+label={listings:jasm},
+caption={"Пример использования библиотеки Jasmine"},
+style=java]
+var exec;
+beforeEach(){
+	exec = jasmine.createSpy();
+	spyOn(document 'getElemntById').andReturn({exec:getTable})
+}
+\end{lstlisting}
+
+\section{Итоги}
+
+Тестирование любого проекта является его важной частью. Разделение тестирования на backend и frontend части позволяет проверить работу как в серверной части, так и в части интерфейса. 
+
+Тесты для серверной части помогают проверить корректность выборки данных из JSON массива.
+
+Данные, полученные в тестировании, свидетельствуют о корректной работе сервиса. При некоректно выбранных данных генерация не происходит и пользователю возвращается корректная ошибка.
